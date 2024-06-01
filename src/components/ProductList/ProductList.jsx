@@ -8,7 +8,7 @@ export function ProductList() {
         <>
         <h3>List of Products</h3>
         <ul>
-            {products ? (
+            {products.length !== 0 ? (
                 products.map((product) => (
                     <li key={product.id}>
                         <ProductThumbnail product={product} />

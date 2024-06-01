@@ -6,15 +6,17 @@ import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 export function Details() {
     const { products } = useProducts();
     const { id } = useParams();
-    const product = products[id - 1];
+    const product = products.find(product => product.id === +id);
 
     return (
         <>
-        {product && (
+        {product ? (
             <>
                 <Breadcrumb product={product} />
                 <ItemDetails product={product} />
             </>
+        ) : (
+            <p>404: Product Could Not Be Found</p>
         )}
         </>
     )

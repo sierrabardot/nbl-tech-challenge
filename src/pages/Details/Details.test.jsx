@@ -4,8 +4,8 @@ import { describe, it, expect } from 'vitest';
 import { Details } from './Details';
 
 const mockProducts = [
-    { id: 1, title: 'Test Product 1', description: 'Test description 1', images: ['http://example.com/image1.jpg'], price: '10.00' },
-    { id: 2, title: 'Test Product 2', description: 'Test description 2', images: ['http://example.com/image2.jpg'], price: '20.00' }
+    { id: 1, title: 'Test Product 1', description: 'Test description 1', images: ['http://test.com/image1.jpg'], price: '10.00' },
+    { id: 2, title: 'Test Product 2', description: 'Test description 2', images: ['http://test.com/image2.jpg'], price: '20.00' }
 ];
 
 vi.mock('../../contexts/ProductsProvider', () => ({

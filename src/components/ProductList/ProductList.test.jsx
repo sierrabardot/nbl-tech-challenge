@@ -21,14 +21,14 @@ describe('ProductList', () => {
         expect(screen.getByText('Product 2')).toBeInTheDocument();
     })
 
-    it('should display a message when there are no products', () => {
-        useProducts.mockReturnValue({ products: null})
+    it('should display a message when there are no products in array', () => {
+        useProducts.mockReturnValue({ products: []})
         render(<ProductList />);
         expect(screen.getByText('No Products Found')).toBeInTheDocument();
     })
 
     it('should not render list items when no products are found', () => {
-        useProducts.mockReturnValue({ products: null})
+        useProducts.mockReturnValue({ products: []})
         render(<ProductList />);
         expect(screen.queryByRole('listitem')).not.toBeInTheDocument();
     })

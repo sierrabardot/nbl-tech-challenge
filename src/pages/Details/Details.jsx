@@ -2,15 +2,18 @@ import { useParams } from "react-router-dom"
 import { useProducts } from "../../contexts/ProductsProvider"
 import { ItemDetails } from "../../components/ItemDetails/ItemDetails";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
+import { LoadingSpinner } from "../../components/LoadingSpinner/LoadingSpinner";
 
 export function Details() {
-    const { products } = useProducts();
+    const { products, loading } = useProducts();
     const { id } = useParams();
     const product = products.find(product => product.id === +id);
 
     return (
         <>
-        {product ? (
+        {loading ? (
+            <LoadingSpinner />
+        ) : product ? (
             <>
                 <Breadcrumb product={product} />
                 <ItemDetails product={product} />

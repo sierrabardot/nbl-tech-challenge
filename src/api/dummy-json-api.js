@@ -10,3 +10,12 @@ export async function fetchProductList() {
         console.error(error);
     }
 }
+
+export async function fetchProduct(id) {
+    try {
+        const response = await axios.get(`${BASE_URL}/${id}`);
+        return response;
+    } catch (error) {
+        console.error(error);
+    }
+}

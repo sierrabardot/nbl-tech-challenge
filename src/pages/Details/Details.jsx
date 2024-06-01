@@ -10,8 +10,12 @@ export function Details() {
 
     return (
         <>
-        <Breadcrumb product={product} />
-        <ItemDetails product={product} />
+        {product && (
+            <>
+                <Breadcrumb product={product} />
+                <ItemDetails product={product} />
+            </>
+        )}
         </>
     )
 }

@@ -1,9 +1,8 @@
-import { useProducts } from "../../contexts/ProductsProvider"
-import { ProductThumbnail } from "../ProductThumbnail/ProductThumbnail"
-
+import { useProducts } from "../../contexts/ProductsProvider";
+import { ProductThumbnail } from "../ProductThumbnail/ProductThumbnail";
 
 export function ProductList() {
-    const { products } = useProducts()  
+    const { products } = useProducts();
 
     return (
         <>
@@ -13,5 +12,5 @@ export function ProductList() {
             ))
         )}
         </>
-    )
+    );
 }

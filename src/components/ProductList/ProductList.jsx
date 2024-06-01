@@ -7,9 +7,11 @@ export function ProductList() {
 
     return (
         <>
-        {products.map((product) => (
-            <ProductThumbnail key={product.id} product={product} />
-        ))}
+        {products && (
+            products.map((product) => (
+                <ProductThumbnail key={product.id} product={product} />
+            ))
+        )}
         </>
     )
 }

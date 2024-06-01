@@ -1,8 +1,17 @@
+import { useParams } from "react-router-dom"
+import { useProducts } from "../../contexts/ProductsProvider"
+import { ItemDetails } from "../../components/ItemDetails/ItemDetails";
+import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
+
 export function Details() {
-    
+    const { products } = useProducts();
+    const { id } = useParams();
+    const product = products[id - 1];
+
     return (
         <>
-        <h1>Details</h1>
+        <Breadcrumb product={product} />
+        <ItemDetails product={product} />
         </>
     )
 }

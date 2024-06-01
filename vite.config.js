@@ -7,4 +7,10 @@ export default defineConfig({
     optimizeDeps: {
         exclude: ['js-big-decimal'],
     },
+    // Test config
+    test: {
+        globals: true,
+        environment: 'jsdom',
+        setupFiles: './setup-tests.js',
+    },
 });

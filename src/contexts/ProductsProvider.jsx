@@ -4,7 +4,7 @@ import { fetchProductList } from "../api/dummy-json-api";
 const ProductsContext = createContext({})
 
 export const ProductsProvider = ({ children }) => {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState(null);
 
     useEffect(() => {
         const getProducts = async () => {

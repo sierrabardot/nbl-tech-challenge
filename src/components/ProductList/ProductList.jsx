@@ -6,11 +6,18 @@ export function ProductList() {
 
     return (
         <>
-        {products && (
-            products.map((product) => (
-                <ProductThumbnail key={product.id} product={product} />
-            ))
-        )}
-        </>
+        <h3>List of Products</h3>
+        <ul>
+            {products ? (
+                products.map((product) => (
+                    <li key={product.id}>
+                        <ProductThumbnail product={product} />
+                    </li>
+                ))
+            ) : (
+                <p>No Products Found</p>
+            )}
+        </ul>
+    </>
     );
 }

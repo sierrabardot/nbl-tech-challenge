@@ -4,6 +4,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { Details } from "../Details/Details.jsx"
 import { ProductsProvider } from "../../contexts/ProductsProvider.jsx"
 import { Navbar } from "../../components/Navbar/Navbar.jsx";
+import { Footer } from "../../components/Footer/Footer.jsx";
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 {/* </ErrorBoundary> */}
-            </main> 
+            </main>
+            <Footer />
         </ProductsProvider>
         </>
     )

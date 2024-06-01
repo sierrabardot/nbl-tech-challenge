@@ -1,16 +1,10 @@
-import { useProducts } from "../../contexts/ProductsProvider";
+import { ProductList } from "../../components/ProductList/ProductList";
 
 export function Home() {
-    const { products } = useProducts()
-    
-    console.log(products)
 
     return (
         <>
-        <h1>Home</h1>
-        {products.map((product) => (
-            <p>{product.id}</p>
-        ))}
+        <ProductList />
         </>
     )
 }

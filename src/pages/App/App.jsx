@@ -8,7 +8,7 @@ function App() {
     return (
         <>
         <ProductsProvider>
-            <h1>NBL Technical Challenge</h1>
+            <h1>Corner Shop Co.</h1>
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />

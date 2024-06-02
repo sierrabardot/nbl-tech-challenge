@@ -1,8 +1,9 @@
 import styles from "./ItemDetails.module.css"
 
+// ItemDetails component displays detailed information about the product
 export function ItemDetails({ product }) {
+    // Function to capitalise the first letter of a string
     const capitaliseFirstLetter = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-    console.log(product)
 
     return (
         <>
@@ -52,6 +53,7 @@ export function ItemDetails({ product }) {
                     <h4 className="fw-bold mb-4">${product.price}</h4>
                     <p className="mb-5">{product.description}</p>
 
+                    {/* Dynamic rendering of reviews */}
                     <h5 className="mb-3">Reviews</h5>
                     {product.reviews[0] ? (
                         <ul className="list-group">

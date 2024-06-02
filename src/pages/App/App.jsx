@@ -10,14 +10,19 @@ function App() {
 
     return (
         <>
+
+        {/* ProductsProvider provides access to product-related state */}
         <ProductsProvider>
             <div className="main-content">
                 <Navbar />
                 <main className="container-fluid">
+
+                    {/* Wrapping routes in an ErrorBoundary to catch and display errors */}
                     <ErrorBoundary fallback={<div>Something went wrong</div>}>
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/details/:id" element={<Details />} />
+                            
                             {/* Catch all navigates to "/" if the URL does not match any specified pattern */}
                             <Route path="*" element={<Navigate to="/" />} />
                         </Routes>

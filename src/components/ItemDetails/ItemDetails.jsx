@@ -14,7 +14,7 @@ export function ItemDetails({ product }) {
                 {/* Dynamic rendering of image carousel */}
                 <div className="col-md-6">
                     {product.images[1] ? (
-                        <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
+                        <div id="carouselControls" className="carousel slide" data-bs-ride="carousel" aria-label="Product Images Carousel">
                             <div className="carousel-inner">
                                 {product.images.map((img, i) => (
                                     <div key={i} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
@@ -26,11 +26,11 @@ export function ItemDetails({ product }) {
                                     </div>
                                 ))}
                             </div>
-                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev" aria-label="Previous Slide">
                                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span className="visually-hidden">Previous</span>
                             </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+                            <button className="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next" aria-label="Next Slide">
                                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span className="visually-hidden">Next</span>
                             </button>

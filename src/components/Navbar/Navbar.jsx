@@ -4,7 +4,7 @@ export function Navbar() {
     return (
         <>
         <header className="container-fluid bg-orange">
-            <nav className="navbar py-3">
+            <nav className="navbar py-3" aria-label="Main Navigation">
                 <div className="container d-flex justify-content-between">
                     <Link to="/" className="navbar-brand">
                         <img src="/logo.svg" alt="The Corner Store Logo" />
@@ -14,8 +14,8 @@ export function Navbar() {
                             <li className="nav-item">
                                 <NavLink 
                                     to="/" 
-                                    className={({ isActive }) => `nav-link ${isActive ? 'text-light-grey' : 'text-white'}`} 
-                                    aria-current="page"
+                                    className={({ isActive }) => `nav-link ${isActive ? 'text-white' : 'text-light-grey'}`} 
+                                    aria-current="page" role="menuitem"
                                 >Home</NavLink>
                             </li>
                         </ul>

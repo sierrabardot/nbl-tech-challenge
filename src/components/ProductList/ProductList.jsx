@@ -1,5 +1,5 @@
 import { useProducts } from "../../contexts/ProductsProvider";
-import ProductThumbnail from "../ProductThumbnail/ProductThumbnail";
+import { ProductThumbnail } from "../ProductThumbnail/ProductThumbnail";
 import { LoadingSpinner } from "../../components/LoadingSpinner/LoadingSpinner";
 import styles from './ProductList.module.css';
 

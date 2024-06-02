@@ -14,9 +14,11 @@ export function Navbar() {
                             <li className="nav-item">
                                 <NavLink 
                                     to="/" 
-                                    className={({ isActive }) => `nav-link ${isActive ? 'text-white' : 'text-light-grey'}`} 
+                                    className="nav-link"
                                     aria-current="page" role="menuitem"
-                                >Home</NavLink>
+                                >
+                                    Home
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

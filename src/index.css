@@ -31,13 +31,12 @@ a:hover,
     color: grey;
 }
 
-/* footer {
-    position: absolute;
-    bottom: 0;
-} */
-
 .bg-orange {
     background-color: var(--orange);
+}
+
+.bg-beige {
+    background-color: var(--beige);
 }
 
 .bg-dark-grey {
@@ -59,7 +58,9 @@ a:hover,
 }
 
 /* Define image dimensions to improve CLS  */
-img {
+img,
+.img {
     max-width: 100%;
     height: auto;
+    object-fit: contain;
 }

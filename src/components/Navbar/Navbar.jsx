@@ -7,7 +7,7 @@ export function Navbar() {
             <nav className="navbar py-3" aria-label="Main Navigation">
                 <div className="container d-flex justify-content-between">
                     <Link to="/" className="navbar-brand">
-                        <img src="/logo.svg" alt="The Corner Store Logo" />
+                        <img src="/logo.svg" alt="The Corner Store Logo" height="95" width="90" />
                     </Link>
                     <div>
                         <ul className="nav navbar-nav me-auto mb-2 mb-lg-0">

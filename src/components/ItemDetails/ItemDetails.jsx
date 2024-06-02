@@ -14,7 +14,7 @@ export function ItemDetails({ product }) {
                 {/* Dynamic rendering of image carousel */}
                 <div className="col-md-6">
                     {product.images[1] ? (
-                        <div id="carouselControls" className="carousel slide" data-bs-ride="carousel" aria-label="Product Images Carousel">
+                        <div id="carouselControls" className="carousel slide mb-3" data-bs-ride="carousel" aria-label="Product Images Carousel">
                             <div className="carousel-inner">
                                 {product.images.map((img, i) => (
                                     <div key={i} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
@@ -36,20 +36,36 @@ export function ItemDetails({ product }) {
                             </button>
                         </div>
                     ) : (
-                        <img src={product.images[0]} alt={`Image of ${product.title}`} className={`col-12 ${styles.productImage}`} />
+                        <img src={product.images[0]} alt={`Image of ${product.title}`} className={` mb-3 col-12 ${styles.productImage}`} />
                     )}
-                </div>
-                <div className="col-1"></div>
-
-                <div className="col-md-5 my-4">
-                    <h4 className="fw-bold mb-4">${product.price}</h4>
-                    <p className="mb-4">{product.description}</p>
                     <div className="row row-cols-2">
                         <div className="col-3"><span className="fw-bold small">SKU</span></div>
                         <div className="col-9"><p className="small m-0">{product.sku}</p></div>
                         <div className="col-3"><span className="fw-bold small">Category</span></div>
                         <div className="col-9"><p className="small m-0">{capitaliseFirstLetter(product.category)}</p></div>
                     </div>
+                </div>
+                <div className="col-1"></div>
+
+                {/* Product Details */}
+                <div className="col-md-5 my-4">
+                    <h4 className="fw-bold mb-4">${product.price}</h4>
+                    <p className="mb-5">{product.description}</p>
+
+                    <h5 className="mb-3">Reviews</h5>
+                    {product.reviews[0] ? (
+                        <ul className="list-group">
+                            {product.reviews.map((review) => (
+                                <li className="list-group-item">
+                                    <h5>{review.rating}/5</h5>
+                                    <p>{review.comment}</p>
+                                    <i>- {review.reviewerName}</i>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <div className="">No Reviews Yet</div>
+                    )}
                 </div>
             </div>
             </>

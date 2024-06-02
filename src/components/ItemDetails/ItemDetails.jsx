@@ -51,14 +51,26 @@ export function ItemDetails({ product }) {
                 {/* Product Details */}
                 <div className="col-md-5 my-4">
                     <h4 className="fw-bold mb-4">${product.price}</h4>
-                    <p className="mb-5">{product.description}</p>
+                    <p className="mb-4">{product.description}</p>
+
+                    <div className="linebreak mb-4"></div>
+
+                    <div className="d-flex align-content-center mb-3">
+                        <img src="/group.svg" alt="Truck icon" className="me-3" />
+                        <p className="m-0">Free worldwide shipping on all overs over $100.00</p>
+                    </div>
+
+                    <div className="d-flex align-content-center mb-3">
+                        <img src="/3d-rotate.svg" alt="Truck icon" className="me-3" />
+                        <p className="m-0">Ships within 48 hours</p>
+                    </div>
 
                     {/* Dynamic rendering of reviews */}
                     <h5 className="mb-3">Reviews</h5>
                     {product.reviews[0] ? (
                         <ul className="list-group">
-                            {product.reviews.map((review) => (
-                                <li className="list-group-item">
+                            {product.reviews.map((review, i) => (
+                                <li key={i} className="list-group-item">
                                     <h5>{review.rating}/5</h5>
                                     <p>{review.comment}</p>
                                     <i>- {review.reviewerName}</i>

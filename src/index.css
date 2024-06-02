@@ -48,6 +48,10 @@ a:hover,
     background-color: var(--dark-grey);
 }
 
+.bg-medium-grey {
+    background-color: var(--medium-grey);
+}
+
 .bg-light-grey {
     background-color: var(--light-grey);
 }

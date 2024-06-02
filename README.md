@@ -2,11 +2,11 @@
 
 This web application - <b>The Corner Store</b> - was developed using React.js and JavaScript and deployed on Vercel. The purpose of the challenge was to fetch a list of items from the [Dummy JSON Items API](https://dummyjson.com/docs), allowing users to view the product list and details of the selected item. The aim of this challenge was to demonstrate understanding of basic web development, state management and API integration.
 
-### [➡️ View the Live Demo](https://nbl-tech-challenge-2p7ybo5la-sierras-projects-733a4379.vercel.app/)
+### [➡️ View the Live Demo](https://nbl-tech-challenge.vercel.app/)
 
 ## Installation and Setup
 
-[Click here](https://nbl-tech-challenge-2p7ybo5la-sierras-projects-733a4379.vercel.app/) to view the live demo, or install using the simple steps below:
+[Click here](https://nbl-tech-challenge.vercel.app/) to view the live demo, or install using the simple steps below:
 
 1. Clone the repository: `git clone https://github.com/sierrabardot/nbl-tech-challenge.git`
 2. Navigate to the project directory: `cd nbl-tech-challenge`

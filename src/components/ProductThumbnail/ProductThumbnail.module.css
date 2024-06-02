@@ -1,0 +1,9 @@
+.productCard {
+    min-height: 306px;
+}
+
+@media (min-width: 768px) {
+    .productCard {
+        min-height: 392px;
+    }
+}

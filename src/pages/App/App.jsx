@@ -11,17 +11,19 @@ function App() {
     return (
         <>
         <ProductsProvider>
-            <Navbar />
-            <main>
-                {/* <ErrorBoundary fallback={<div>Something went wrong</div>}> */}
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/details/:id" element={<Details />} />
-                        {/* Catch all navigates to "/" if the URL does not match any specified pattern */}
-                        <Route path="*" element={<Navigate to="/" />} />
-                    </Routes>
-                {/* </ErrorBoundary> */}
-            </main>
+            <div className="main-content">
+                <Navbar />
+                <main className="container-fluid">
+                    <ErrorBoundary fallback={<div>Something went wrong</div>}>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/details/:id" element={<Details />} />
+                            {/* Catch all navigates to "/" if the URL does not match any specified pattern */}
+                            <Route path="*" element={<Navigate to="/" />} />
+                        </Routes>
+                    </ErrorBoundary>
+                </main>
+            </div>
             <Footer />
         </ProductsProvider>
         </>

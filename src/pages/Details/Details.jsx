@@ -10,7 +10,7 @@ export function Details() {
     const product = products.find(product => product.id === +id);
 
     return (
-        <>
+        <div className="container">
         {loading ? (
             <LoadingSpinner />
         ) : product ? (
@@ -21,6 +21,6 @@ export function Details() {
         ) : (
             <p>404: Product Could Not Be Found</p>
         )}
-        </>
+        </div>
     )
 }
